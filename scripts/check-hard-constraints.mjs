@@ -29,6 +29,30 @@ mustInclude("USD currency code", 'currency_code: "USD"');
 mustInclude("voxel fantasy", "voxel");
 mustInclude("ground-shaping", "ground-shaping");
 mustInclude("swappable showcase", 'id="showcase-list"');
+mustInclude(
+  "handoff 1",
+  "Shape the ground — dig and place blocks in a living voxel sandbox built for player-made terrain."
+);
+mustInclude(
+  "handoff 2",
+  "Drop in and play — boot from a clear menu straight into a world you can walk, carve, and rebuild."
+);
+mustInclude(
+  "handoff 3",
+  "Made for Windows first — early builds aim at a smooth desktop play loop while the world grows."
+);
+mustInclude(
+  "handoff 4",
+  "Sandbox roots, bigger horizon — starting with the core reshape-the-world fantasy; multiplayer and deeper systems planned as the project matures."
+);
+mustInclude(
+  "handoff 5",
+  "Early access, early 2027 — back the preorder now and help steer TerraForge as it takes shape."
+);
+mustInclude(
+  "handoff 6",
+  "Indie-built, player-first — focused on a honest dig/place sandbox, not vaporware feature lists."
+);
 mustInclude("reservation section", 'id="reservation"');
 mustInclude("digital reservation", "digital reservation");
 mustInclude("nothing to download today", "nothing to download today");
