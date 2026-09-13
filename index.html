@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TerraForge — Early-access pre-order</title>
+  <meta name="description" content="TerraForge early-access pre-order. USD $19.99. Early access early 2027. Digital reservation — nothing to download today." />
+  <link rel="canonical" href="https://terraforge-us.com/" />
+  <meta name="theme-color" content="#0b0a09" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TerraForge" />
+  <meta property="og:title" content="TerraForge — Early-access pre-order" />
+  <meta property="og:description" content="Pre-order TerraForge early access for USD $19.99. Early access early 2027." />
+  <meta property="og:url" content="https://terraforge-us.com/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="TerraForge — Early-access pre-order" />
+  <meta name="twitter:description" content="Pre-order TerraForge early access for USD $19.99. Early access early 2027." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0a09'/%3E%3Cpath d='M10 46 L32 14 L54 46 H42 L32 30 L22 46 Z' fill='%23d08a46'/%3E%3Cpath d='M18 50 H46' stroke='%23e0783a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,480;9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "TerraForge",
+    "description": "TerraForge early access pre-order. Early access early 2027.",
+    "url": "https://terraforge-us.com/",
+    "brand": { "@type": "Brand", "name": "TerraForge" },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://terraforge-us.com/",
+      "price": "19.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/PreOrder",
+      "name": "TerraForge early access pre-order"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0a09;
+      --bg-panel: #14110e;
+      --ink: #f4ece3;
+      --mute: #b3a79b;
+      --ember: #e0783a;
+      --copper: #d08a46;
+      --gold: #e4b57a;
+      --line: rgba(244, 236, 227, 0.12);
+      --ok: #8fce7a;
+      --err: #e08a7a;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      font-family: Outfit, system-ui, sans-serif;
+      background:
+        radial-gradient(900px 480px at 80% 110%, rgba(224, 120, 58, 0.16), transparent 60%),
+        radial-gradient(700px 420px at 8% -10%, rgba(208, 138, 70, 0.08), transparent 55%),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.22;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cpath fill='none' stroke='%23f4ece3' stroke-opacity='0.18' d='M10 180 C40 140 70 150 110 110 C150 70 170 90 210 40 M-10 130 C40 150 80 90 140 100 C190 108 210 70 240 80 M20 210 C80 190 90 220 160 190'/%3E%3C/svg%3E");
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 0.9rem 0 1.5rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.2rem 0 0.95rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .mark {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 auto;
+    }
+
+    .brand-name {
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .avail {
+      border: 1px solid var(--line);
+      background: rgba(224, 120, 58, 0.08);
+      color: var(--gold);
+      border-radius: 999px;
+      padding: 0.42rem 0.8rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .stage {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      gap: 1.25rem;
+      align-items: stretch;
+    }
+
+    .copy, .panel {
+      border: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg-panel) 88%, transparent);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+    }
+
+    .copy { padding: clamp(1.15rem, 2.4vw, 1.85rem); }
+
+    .eyebrow {
+      margin: 0 0 0.85rem;
+      color: var(--copper);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.74rem;
+      font-weight: 500;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.7rem, 6.5vw, 4.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.035em;
+    }
+
+    .lead {
+      max-width: 34rem;
+      margin: 0.85rem 0 0;
+      color: var(--mute);
+      font-size: 1.05rem;
+      line-height: 1.55;
+    }
+
+    .when {
+      display: inline-flex;
+      margin: 0.9rem 0 0;
+      padding: 0.45rem 0.75rem;
+      border-left: 3px solid var(--ember);
+      background: rgba(224, 120, 58, 0.07);
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .offer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.45rem 0.85rem;
+      margin: 1.05rem 0 0.85rem;
+    }
+
+    .price {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    .price-note { color: var(--mute); }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 26rem;
+      min-height: 3.15rem;
+      padding: 0.85rem 1.1rem;
+      border: 0;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #ef9350, #c45d28);
+      color: #1a100b;
+      font: inherit;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 10px 28px rgba(224, 120, 58, 0.22);
+    }
+
+    .cta:hover { filter: brightness(1.06); }
+    .cta:focus-visible, .paypal-box:focus-within { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+    .fine {
+      margin: 0.85rem 0 0;
+      color: var(--mute);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    #preorder {
+      margin-top: 1rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--line);
+    }
+
+    #preorder h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .paypal-box {
+      width: min(100%, 380px);
+      margin-top: 0.85rem;
+      min-height: 52px;
+    }
+
+    .status {
+      margin: 0.85rem 0 0;
+      padding: 0.75rem 0.85rem;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .status[data-kind="ok"] { background: rgba(143, 206, 122, 0.12); color: var(--ok); }
+    .status[data-kind="error"] { background: rgba(224, 138, 122, 0.12); color: var(--err); }
+    .status[data-kind="note"] { background: rgba(244, 236, 227, 0.06); color: var(--mute); }
+
+    .panel {
+      min-height: 380px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ridges {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .panel-caption {
+      position: absolute;
+      left: 1.2rem;
+      right: 1.2rem;
+      bottom: 1.2rem;
+      color: var(--mute);
+      font-size: 0.88rem;
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.2rem;
+      justify-content: space-between;
+      margin-top: 1rem;
+      color: var(--mute);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 820px) {
+      .stage { grid-template-columns: 1fr; }
+      .panel { min-height: 220px; }
+      .avail { font-size: 0.68rem; padding: 0.36rem 0.65rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .cta { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="https://terraforge-us.com/">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="12" fill="#1a1612"/>
+          <path d="M10 46 L32 14 L54 46 H42 L32 30 L22 46 Z" fill="#d08a46"/>
+          <path d="M18 50 H46" stroke="#e0783a" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">TerraForge</span>
+      </a>
+      <p class="avail">Early access early 2027</p>
+    </header>
+
+    <main class="stage">
+      <section class="copy">
+        <p class="eyebrow">Early-access pre-order</p>
+        <h1>TerraForge</h1>
+        <p class="lead">A new ground-shaping title. Reserve your seat now — early access opens early 2027.</p>
+        <p class="when">Early access early 2027</p>
+
+        <div class="offer">
+          <span class="price">$19.99</span>
+          <span class="price-note">USD · digital pre-order</span>
+        </div>
+
+        <a class="cta" href="#preorder">Pre-order early access — $19.99</a>
+        <p class="fine">No download today. No storefront binaries. This page is the pre-order only.</p>
+
+        <section id="preorder" aria-labelledby="checkout-title">
+          <h2 id="checkout-title">Pay with PayPal</h2>
+          <p class="fine">Amount: USD $19.99 · TerraForge early access pre-order · Early access early 2027</p>
+          <div id="paypal-button-container" class="paypal-box"></div>
+          <p id="checkout-status" class="status" hidden></p>
+        </section>
+      </section>
+
+      <aside class="panel" aria-hidden="true">
+        <svg class="ridges" viewBox="0 0 640 720" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1b1612"/>
+              <stop offset="100%" stop-color="#2a1b12"/>
+            </linearGradient>
+            <linearGradient id="glow" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stop-color="#e0783a" stop-opacity="0.55"/>
+              <stop offset="55%" stop-color="#e0783a" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="720" fill="url(#sky)"/>
+          <path d="M0 430 C90 390 140 450 230 400 C320 350 360 410 450 360 C520 325 580 350 640 320 V720 H0 Z" fill="#4a2f1d"/>
+          <path d="M0 500 C120 460 180 530 280 490 C390 445 430 520 540 470 C590 450 620 470 640 455 V720 H0 Z" fill="#2a1c14"/>
+          <path d="M0 580 C160 540 240 610 360 560 C470 515 520 600 640 555 V720 H0 Z" fill="#14110e"/>
+          <path d="M0 430 C90 390 140 450 230 400 C320 350 360 410 450 360 C520 325 580 350 640 320" fill="none" stroke="#e4b57a" stroke-opacity="0.28"/>
+          <path d="M0 500 C120 460 180 530 280 490 C390 445 430 520 540 470 C590 450 620 470 640 455" fill="none" stroke="#e0783a" stroke-opacity="0.22"/>
+          <rect width="640" height="720" fill="url(#glow)"/>
+          <circle cx="470" cy="168" r="46" fill="#e4b57a" opacity="0.9"/>
+        </svg>
+        <p class="panel-caption">Early access early 2027</p>
+      </aside>
+    </main>
+
+    <footer>
+      <span>© 2026 TerraForge · terraforge-us.com</span>
+      <span>Early access early 2027 · USD $19.99 pre-order</span>
+    </footer>
+  </div>
+
+  <noscript>
+    <p style="max-width:40rem;margin:1rem auto;padding:1rem;color:#b3a79b;text-align:center;">
+      Enable JavaScript to pre-order TerraForge early access for $19.99. Early access early 2027.
+    </p>
+  </noscript>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AaxLRJKmKRPyCpXy0WDxCvxbg4rELMydKeT2UvrZta2l-NEbe1NWzqBaeY2LFWn6nStNbjFmIqJ4qFQK&currency=USD&intent=capture"></script>
+  <script>
+    (function () {
+      var status = document.getElementById("checkout-status");
+      var box = document.getElementById("paypal-button-container");
+
+      function setStatus(message, kind) {
+        status.hidden = false;
+        status.textContent = message;
+        status.setAttribute("data-kind", kind);
+      }
+
+      if (!window.paypal || typeof paypal.Buttons !== "function") {
+        setStatus("PayPal checkout could not load. Refresh and try again.", "error");
+        return;
+      }
+
+      paypal.Buttons({
+        style: {
+          layout: "vertical",
+          color: "gold",
+          shape: "rect",
+          label: "paypal",
+          height: 48
+        },
+        createOrder: function (data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              description: "TerraForge early access pre-order",
+              amount: {
+                currency_code: "USD",
+                value: "19.99"
+              }
+            }]
+          });
+        },
+        onApprove: function (data, actions) {
+          return actions.order.capture().then(function () {
+            box.setAttribute("hidden", "");
+            setStatus("Pre-order received. Early access is early 2027 — nothing to download today. Thank you.", "ok");
+          });
+        },
+        onCancel: function () {
+          setStatus("Checkout canceled. Your pre-order was not placed.", "note");
+        },
+        onError: function () {
+          setStatus("Checkout could not complete. Try again in a moment.", "error");
+        }
+      }).render("#paypal-button-container");
+    })();
+  </script>
+</body>
+</html>
