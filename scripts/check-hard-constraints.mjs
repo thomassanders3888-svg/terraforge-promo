@@ -59,13 +59,24 @@ mustInclude("nothing to download today", "nothing to download today");
 mustInclude("Helion Compact cross-link", 'href="https://helioncompact.com/"');
 mustInclude("LOW WATER mention", "LOW WATER");
 mustInclude("og:url", 'property="og:url" content="https://terraforge-us.com/"');
+mustInclude("who section", 'id="who-heading"');
+mustInclude("who copy", "not a finished MMO, not a Steam storefront today, not a crowded lobby on day one.");
+mustInclude("ea section", "What early access means");
+mustInclude("ea window", "EA entry when the planned <strong>early 2027</strong> window opens.");
+mustInclude("loop section", "Dig, place, test");
+mustInclude("loop copy", "That is the loop — not a masquerade of a live MMO.");
+mustInclude("faq section", "Early access FAQ");
+mustInclude("faq window", "Targeting <strong>early 2027</strong> for a Windows-first early-access window");
+mustInclude("preorder anchor", 'id="preorder"');
 
-mustNotMatch("Steam store claim", /store\.steampowered\.com|steam store/i);
-mustNotMatch("Unity binary / dump", /unity binary|unity binaries|\.apk|\.exe|code dump/i);
+mustNotMatch("Steam store URL", /store\.steampowered\.com/i);
+mustNotMatch("Steam availability claim", /available on steam|buy (?:it )?on steam|get (?:it )?on steam|wishlist on steam/i);
+mustNotMatch("Unity marketing", /unity binary|unity binaries|powered by unity|made (?:with|in) unity|\.apk|\.exe|code dump/i);
 mustNotMatch("Otcn", /otcn/i);
 mustNotMatch("hosted PayPal tip N3J6", /n3j6/i);
 mustNotMatch("hosted PayPal tip BAAGUL", /baagul/i);
 mustNotMatch("hosted buttons markup", /paypal\.com\/ncp\/payment|hostedbutton/i);
+mustNotMatch("ad network", /googletagmanager|doubleclick|adservice|carbonads/i);
 
 const h1 = (html.match(/<h1[^>]*>[\s\S]*?<\/h1>/i) || [])[0] || "";
 if (!/TerraForge/.test(h1)) failures.push("missing: h1 TerraForge");

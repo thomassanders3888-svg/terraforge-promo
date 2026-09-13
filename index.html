@@ -96,6 +96,7 @@
 
     a:focus-visible,
     .cta:focus-visible,
+    summary:focus-visible,
     .paypal-box:focus-within {
       outline: 2px solid var(--focus);
       outline-offset: 3px;
@@ -369,6 +370,82 @@
 
     .facts li + li { margin-top: 0.35rem; }
 
+    .who .facts {
+      margin-top: 1.1rem;
+    }
+
+    .loop-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 1.1rem;
+    }
+
+    .loop-steps > div {
+      margin: 0;
+      padding: 0.95rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(11, 10, 9, 0.35);
+    }
+
+    .loop-steps h3 {
+      margin: 0 0 0.45rem;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .loop-steps p {
+      margin: 0;
+      color: var(--mute);
+      line-height: 1.55;
+    }
+
+    .inline-cta-wrap {
+      margin: 1.15rem 0 0;
+    }
+
+    .inline-cta {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    .inline-cta:hover { color: var(--ink); }
+
+    .faq details {
+      margin-top: 0.65rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(11, 10, 9, 0.35);
+    }
+
+    .faq details:first-of-type {
+      margin-top: 1.1rem;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .faq summary::-webkit-details-marker {
+      color: var(--copper);
+    }
+
+    .faq details[open] summary {
+      color: var(--gold);
+    }
+
+    .faq details p {
+      margin: 0.65rem 0 0;
+      color: var(--mute);
+      line-height: 1.55;
+    }
+
     .related {
       display: flex;
       flex-wrap: wrap;
@@ -404,7 +481,8 @@
       .panel { min-height: 220px; }
       .avail { font-size: 0.68rem; padding: 0.36rem 0.65rem; }
       .showcase-list,
-      .split { grid-template-columns: 1fr; }
+      .split,
+      .loop-steps { grid-template-columns: 1fr; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -500,6 +578,96 @@
             <h3>Indie-built, player-first — focused on a honest dig/place sandbox, not vaporware feature lists.</h3>
           </li>
         </ul>
+      </section>
+
+      <section id="who" class="who band" aria-labelledby="who-heading">
+        <h2 id="who-heading">Who this is for</h2>
+        <p class="band-lead">TerraForge is for people who want to shape ground, test an idea, and see whether the land holds. Windows-first sandbox in early access — not a finished MMO, not a Steam storefront today, not a crowded lobby on day one.</p>
+        <ul class="facts">
+          <li>Builders who dig and place rather than wait for content drops.</li>
+          <li>Windows players who want a desktop sandbox first.</li>
+          <li>Backers who can live with early access: incomplete, iterative, explicit.</li>
+          <li>Anyone supporting an honest play loop — not a feature wishlist.</li>
+        </ul>
+        <p class="inline-cta-wrap"><a class="inline-cta" href="#preorder">Pre-order early access — $19.99 via PayPal</a></p>
+      </section>
+
+      <section id="early-access" class="ea band" aria-labelledby="ea-heading">
+        <h2 id="ea-heading">What early access means</h2>
+        <div class="split">
+          <div>
+            <h3>Means</h3>
+            <ul class="facts">
+              <li>EA entry when the planned <strong>early 2027</strong> window opens.</li>
+              <li>A dig/place sandbox still being proven in play.</li>
+              <li>Gaps, iteration, builds that change.</li>
+              <li>Refunds follow PayPal terms on this site.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Does not mean</h3>
+            <ul class="facts">
+              <li>No Steam store today.</li>
+              <li>No day-one multiplayer promise.</li>
+              <li>No finished MMO / locked feature checklist.</li>
+              <li>No invented engine marketing — dig, place, test, revise.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="inline-cta-wrap"><a class="inline-cta" href="#preorder">Pre-order — $19.99 · early 2027</a></p>
+      </section>
+
+      <section id="loop" class="loop band" aria-labelledby="loop-heading">
+        <h2 id="loop-heading">Dig, place, test</h2>
+        <p class="band-lead">Shape the ground. Put something there. Walk the result. That is the loop — not a masquerade of a live MMO.</p>
+        <div class="loop-steps">
+          <div>
+            <h3>Shape ground</h3>
+            <p>Raise, cut, terrace — a surface you can argue with.</p>
+          </div>
+          <div>
+            <h3>Place and revise</h3>
+            <p>Wall, path, pit, platform — then stand on it. If it fails, tear it back.</p>
+          </div>
+          <div>
+            <h3>Windows-first, on purpose</h3>
+            <p>Supported early-access client is Windows. Other platforms only when actually ready.</p>
+          </div>
+        </div>
+        <p class="inline-cta-wrap"><a class="inline-cta" href="#preorder">Enter early access — $19.99</a></p>
+      </section>
+
+      <section id="faq" class="faq band" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Early access FAQ</h2>
+        <details>
+          <summary>What is TerraForge?</summary>
+          <p>An indie voxel sandbox where you dig, place, and reshape the world — terrain first.</p>
+        </details>
+        <details>
+          <summary>When is early access?</summary>
+          <p>Targeting <strong>early 2027</strong> for a Windows-first early-access window as the dig/place core matures.</p>
+        </details>
+        <details>
+          <summary>What do I get if I preorder?</summary>
+          <p>Early-access entry when builds open in that window, plus support for ongoing development (see PayPal/site terms).</p>
+        </details>
+        <details>
+          <summary>Is it on Steam today?</summary>
+          <p>No Steam store page yet — desktop Windows is the first play target.</p>
+        </details>
+        <details>
+          <summary>Is this a finished MMO?</summary>
+          <p>No. Core sandbox loop first; bigger systems only as they’re real.</p>
+        </details>
+        <details>
+          <summary>Multiplayer?</summary>
+          <p>Not promised for day-one EA — focus is a solid single-player reshape-the-world loop.</p>
+        </details>
+        <details>
+          <summary>Refunds?</summary>
+          <p>Follow PayPal/preorder terms on this site — we don’t invent policy in marketing copy.</p>
+        </details>
+        <p class="inline-cta-wrap"><a class="inline-cta" href="#preorder">Go to preorder — $19.99</a></p>
       </section>
 
       <section id="reservation" class="band" aria-labelledby="reservation-title">
