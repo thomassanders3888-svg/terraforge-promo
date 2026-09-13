@@ -1,0 +1,17 @@
+name: landing-constraints
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check hard landing constraints
+        run: node scripts/check-hard-constraints.mjs
