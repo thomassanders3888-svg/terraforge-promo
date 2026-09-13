@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TerraForge — Early-access pre-order</title>
-  <meta name="description" content="TerraForge early-access pre-order. USD $19.99. Early access early 2027. Digital reservation — nothing to download today." />
+  <title>TerraForge — Voxel ground-shaping · Early access early 2027</title>
+  <meta name="description" content="TerraForge is a voxel ground-shaping title: raise ridges, cut valleys, and make the land answer your hands. Early-access pre-order USD $19.99. Digital reservation — nothing to download today. Early access early 2027." />
   <link rel="canonical" href="https://terraforge-us.com/" />
   <meta name="theme-color" content="#0b0a09" />
   <meta name="robots" content="index,follow" />
+  <meta name="author" content="TerraForge" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TerraForge" />
-  <meta property="og:title" content="TerraForge — Early-access pre-order" />
-  <meta property="og:description" content="Pre-order TerraForge early access for USD $19.99. Early access early 2027." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="TerraForge — Shape the ground. Early access early 2027." />
+  <meta property="og:description" content="Voxel ground-shaping and a player fantasy of making the land. Reserve early access for USD $19.99. Digital reservation only — nothing to download today. Early access early 2027." />
   <meta property="og:url" content="https://terraforge-us.com/" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="TerraForge — Early-access pre-order" />
-  <meta name="twitter:description" content="Pre-order TerraForge early access for USD $19.99. Early access early 2027." />
+  <meta name="twitter:title" content="TerraForge — Shape the ground. Early access early 2027." />
+  <meta name="twitter:description" content="Voxel ground-shaping. Early-access pre-order USD $19.99. Digital reservation — nothing to download today. Early access early 2027." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0a09'/%3E%3Cpath d='M10 46 L32 14 L54 46 H42 L32 30 L22 46 Z' fill='%23d08a46'/%3E%3Cpath d='M18 50 H46' stroke='%23e0783a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +27,7 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "TerraForge",
-    "description": "TerraForge early access pre-order. Early access early 2027.",
+    "description": "Voxel ground-shaping title. Early-access pre-order. Digital reservation — nothing to download today. Early access early 2027.",
     "url": "https://terraforge-us.com/",
     "brand": { "@type": "Brand", "name": "TerraForge" },
     "offers": {
@@ -44,13 +46,14 @@
       --bg: #0b0a09;
       --bg-panel: #14110e;
       --ink: #f4ece3;
-      --mute: #b3a79b;
+      --mute: #c4b7aa;
       --ember: #e0783a;
       --copper: #d08a46;
       --gold: #e4b57a;
-      --line: rgba(244, 236, 227, 0.12);
+      --line: rgba(244, 236, 227, 0.14);
       --ok: #8fce7a;
       --err: #e08a7a;
+      --focus: #f0c98a;
     }
 
     * { box-sizing: border-box; }
@@ -75,12 +78,35 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cpath fill='none' stroke='%23f4ece3' stroke-opacity='0.18' d='M10 180 C40 140 70 150 110 110 C150 70 170 90 210 40 M-10 130 C40 150 80 90 140 100 C190 108 210 70 240 80 M20 210 C80 190 90 220 160 190'/%3E%3C/svg%3E");
     }
 
+    .skip {
+      position: absolute;
+      left: 0.75rem;
+      top: 0.75rem;
+      z-index: 20;
+      padding: 0.55rem 0.8rem;
+      border-radius: 8px;
+      background: var(--gold);
+      color: #1a100b;
+      font-weight: 600;
+      text-decoration: none;
+      transform: translateY(-160%);
+    }
+
+    .skip:focus { transform: none; }
+
+    a:focus-visible,
+    .cta:focus-visible,
+    .paypal-box:focus-within {
+      outline: 2px solid var(--focus);
+      outline-offset: 3px;
+    }
+
     .wrap {
       position: relative;
       z-index: 1;
       width: min(1120px, calc(100% - 2rem));
       margin: 0 auto;
-      padding: 0.9rem 0 1.5rem;
+      padding: 0.9rem 0 2rem;
     }
 
     header {
@@ -129,7 +155,7 @@
       align-items: stretch;
     }
 
-    .copy, .panel {
+    .copy, .panel, .band {
       border: 1px solid var(--line);
       background: color-mix(in srgb, var(--bg-panel) 88%, transparent);
       backdrop-filter: blur(10px);
@@ -157,11 +183,16 @@
     }
 
     .lead {
-      max-width: 34rem;
+      max-width: 36rem;
       margin: 0.85rem 0 0;
       color: var(--mute);
       font-size: 1.05rem;
       line-height: 1.55;
+    }
+
+    .lead strong {
+      color: var(--ink);
+      font-weight: 500;
     }
 
     .when {
@@ -210,7 +241,6 @@
     }
 
     .cta:hover { filter: brightness(1.06); }
-    .cta:focus-visible, .paypal-box:focus-within { outline: 2px solid var(--gold); outline-offset: 3px; }
 
     .fine {
       margin: 0.85rem 0 0;
@@ -271,6 +301,95 @@
       font-size: 0.88rem;
     }
 
+    .band {
+      margin-top: 1.15rem;
+      padding: clamp(1.2rem, 2.4vw, 1.8rem);
+    }
+
+    .band h2 {
+      margin: 0;
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.55rem, 3vw, 2rem);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .band-lead {
+      max-width: 42rem;
+      margin: 0.55rem 0 0;
+      color: var(--mute);
+      line-height: 1.55;
+    }
+
+    /* Swappable showcase slot: replace #showcase-list items when Forge Chief copy arrives. */
+    .showcase-list {
+      list-style: none;
+      margin: 1.15rem 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .showcase-list li {
+      margin: 0;
+      padding: 0.95rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(11, 10, 9, 0.35);
+    }
+
+    .showcase-list h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    .showcase-list p {
+      margin: 0;
+      color: var(--mute);
+      line-height: 1.5;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.1rem;
+    }
+
+    .split h3 {
+      margin: 0 0 0.55rem;
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .facts {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--mute);
+      line-height: 1.55;
+    }
+
+    .facts li + li { margin-top: 0.35rem; }
+
+    .related {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.75rem 1.25rem;
+    }
+
+    .related a {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+
+    .related a:hover { color: var(--ink); }
+
     footer {
       display: flex;
       flex-wrap: wrap;
@@ -281,10 +400,16 @@
       font-size: 0.82rem;
     }
 
+    footer a {
+      color: var(--gold);
+    }
+
     @media (max-width: 820px) {
       .stage { grid-template-columns: 1fr; }
       .panel { min-height: 220px; }
       .avail { font-size: 0.68rem; padding: 0.36rem 0.65rem; }
+      .showcase-list,
+      .split { grid-template-columns: 1fr; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -294,6 +419,7 @@
   </style>
 </head>
 <body>
+  <a class="skip" href="#preorder">Skip to pre-order checkout</a>
   <div class="wrap">
     <header>
       <a class="brand" href="https://terraforge-us.com/">
@@ -307,62 +433,120 @@
       <p class="avail">Early access early 2027</p>
     </header>
 
-    <main class="stage">
-      <section class="copy">
-        <p class="eyebrow">Early-access pre-order</p>
-        <h1>TerraForge</h1>
-        <p class="lead">A new ground-shaping title. Reserve your seat now — early access opens early 2027.</p>
-        <p class="when">Early access early 2027</p>
+    <main>
+      <div class="stage">
+        <section class="copy" aria-labelledby="hero-title">
+          <p class="eyebrow">Early-access pre-order</p>
+          <h1 id="hero-title">TerraForge</h1>
+          <p class="lead">Shape the ground. Raise ridges, cut valleys, and treat the land as <strong>voxel material</strong> — a player fantasy of making a world with your hands. Reserve early access now.</p>
+          <p class="when">Early access early 2027</p>
 
-        <div class="offer">
-          <span class="price">$19.99</span>
-          <span class="price-note">USD · digital pre-order</span>
-        </div>
+          <div class="offer">
+            <span class="price">$19.99</span>
+            <span class="price-note">USD · digital pre-order</span>
+          </div>
 
-        <a class="cta" href="#preorder">Pre-order early access — $19.99</a>
-        <p class="fine">No download today. No storefront binaries. This page is the pre-order only.</p>
+          <a class="cta" href="#preorder">Pre-order early access — $19.99</a>
+          <p class="fine">Digital reservation only. Nothing to download today. Early access early 2027.</p>
 
-        <section id="preorder" aria-labelledby="checkout-title">
-          <h2 id="checkout-title">Pay with PayPal</h2>
-          <p class="fine">Amount: USD $19.99 · TerraForge early access pre-order · Early access early 2027</p>
-          <div id="paypal-button-container" class="paypal-box"></div>
-          <p id="checkout-status" class="status" hidden></p>
+          <section id="preorder" aria-labelledby="checkout-title">
+            <h2 id="checkout-title">Pay with PayPal</h2>
+            <p class="fine">Amount: USD $19.99 · TerraForge early access pre-order · Early access early 2027</p>
+            <div id="paypal-button-container" class="paypal-box"></div>
+            <p id="checkout-status" class="status" role="status" hidden></p>
+          </section>
         </section>
+
+        <aside class="panel" aria-hidden="true">
+          <svg class="ridges" viewBox="0 0 640 720" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1b1612"/>
+                <stop offset="100%" stop-color="#2a1b12"/>
+              </linearGradient>
+              <linearGradient id="glow" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stop-color="#e0783a" stop-opacity="0.55"/>
+                <stop offset="55%" stop-color="#e0783a" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <rect width="640" height="720" fill="url(#sky)"/>
+            <path d="M0 430 C90 390 140 450 230 400 C320 350 360 410 450 360 C520 325 580 350 640 320 V720 H0 Z" fill="#4a2f1d"/>
+            <path d="M0 500 C120 460 180 530 280 490 C390 445 430 520 540 470 C590 450 620 470 640 455 V720 H0 Z" fill="#2a1c14"/>
+            <path d="M0 580 C160 540 240 610 360 560 C470 515 520 600 640 555 V720 H0 Z" fill="#14110e"/>
+            <path d="M0 430 C90 390 140 450 230 400 C320 350 360 410 450 360 C520 325 580 350 640 320" fill="none" stroke="#e4b57a" stroke-opacity="0.28"/>
+            <path d="M0 500 C120 460 180 530 280 490 C390 445 430 520 540 470 C590 450 620 470 640 455" fill="none" stroke="#e0783a" stroke-opacity="0.22"/>
+            <rect width="640" height="720" fill="url(#glow)"/>
+            <circle cx="470" cy="168" r="46" fill="#e4b57a" opacity="0.9"/>
+          </svg>
+          <p class="panel-caption">Voxel ground. Early access early 2027.</p>
+        </aside>
+      </div>
+
+      <!-- Showcase bullets are swappable. Keep #showcase-list as <li><h3>+<p> items
+           so Forge Chief copy can replace these without changing layout. -->
+      <section id="showcase" class="band" aria-labelledby="showcase-title" data-showcase-slot="forge-chief">
+        <h2 id="showcase-title">The ground answers</h2>
+        <p class="band-lead">TerraForge is a ground-shaping promise: the terrain is the material, not a painted backdrop. Early access opens early 2027 — this page reserves your seat, it does not ship a build today.</p>
+        <ul class="showcase-list" id="showcase-list">
+          <li>
+            <h3>Raise and cut</h3>
+            <p>Push ridges up. Open valleys. Terrace a hold into the slope. The fantasy is tactile: you decide where the land goes.</p>
+          </li>
+          <li>
+            <h3>Voxel underfoot</h3>
+            <p>The world is built from ground you can treat as material — voxel mass you shape, not a texture you walk across.</p>
+          </li>
+          <li>
+            <h3>A forger’s sit-down</h3>
+            <p>Slow, exploratory play. You arrive as the one who makes the ridgeline, then live with the world that remains.</p>
+          </li>
+          <li>
+            <h3>Early access early 2027</h3>
+            <p>The play window is stated, not implied. Reserve now; the title opens in early 2027. Nothing to download today.</p>
+          </li>
+        </ul>
       </section>
 
-      <aside class="panel" aria-hidden="true">
-        <svg class="ridges" viewBox="0 0 640 720" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#1b1612"/>
-              <stop offset="100%" stop-color="#2a1b12"/>
-            </linearGradient>
-            <linearGradient id="glow" x1="0" y1="1" x2="0" y2="0">
-              <stop offset="0%" stop-color="#e0783a" stop-opacity="0.55"/>
-              <stop offset="55%" stop-color="#e0783a" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <rect width="640" height="720" fill="url(#sky)"/>
-          <path d="M0 430 C90 390 140 450 230 400 C320 350 360 410 450 360 C520 325 580 350 640 320 V720 H0 Z" fill="#4a2f1d"/>
-          <path d="M0 500 C120 460 180 530 280 490 C390 445 430 520 540 470 C590 450 620 470 640 455 V720 H0 Z" fill="#2a1c14"/>
-          <path d="M0 580 C160 540 240 610 360 560 C470 515 520 600 640 555 V720 H0 Z" fill="#14110e"/>
-          <path d="M0 430 C90 390 140 450 230 400 C320 350 360 410 450 360 C520 325 580 350 640 320" fill="none" stroke="#e4b57a" stroke-opacity="0.28"/>
-          <path d="M0 500 C120 460 180 530 280 490 C390 445 430 520 540 470 C590 450 620 470 640 455" fill="none" stroke="#e0783a" stroke-opacity="0.22"/>
-          <rect width="640" height="720" fill="url(#glow)"/>
-          <circle cx="470" cy="168" r="46" fill="#e4b57a" opacity="0.9"/>
-        </svg>
-        <p class="panel-caption">Early access early 2027</p>
+      <section id="reservation" class="band" aria-labelledby="reservation-title">
+        <h2 id="reservation-title">What this pre-order is — and is not</h2>
+        <p class="band-lead">USD $19.99 buys a digital reservation for TerraForge early access. Read this before you pay.</p>
+        <div class="split">
+          <div>
+            <h3>This is</h3>
+            <ul class="facts">
+              <li>A digital reservation for TerraForge early access</li>
+              <li>USD $19.99, paid here with PayPal</li>
+              <li>A clear access window: early access early 2027</li>
+            </ul>
+          </div>
+          <div>
+            <h3>This is not</h3>
+            <ul class="facts">
+              <li>A download, key, or playable build today</li>
+              <li>A storefront listing or shipped binary</li>
+              <li>Immediate access — early access is early 2027</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <aside id="related" class="band related" aria-labelledby="related-title">
+        <div>
+          <h2 id="related-title">Also from this desk</h2>
+          <p class="band-lead">Optional reading: <cite>LOW WATER</cite>, Book One of THE HELION COMPACT — an ebook, not a game download.</p>
+        </div>
+        <a href="https://helioncompact.com/">Visit helioncompact.com — LOW WATER ebook</a>
       </aside>
     </main>
 
     <footer>
-      <span>© 2026 TerraForge · terraforge-us.com</span>
+      <span>© 2026 TerraForge · <a href="https://terraforge-us.com/">terraforge-us.com</a></span>
       <span>Early access early 2027 · USD $19.99 pre-order</span>
     </footer>
   </div>
 
   <noscript>
-    <p style="max-width:40rem;margin:1rem auto;padding:1rem;color:#b3a79b;text-align:center;">
+    <p style="max-width:40rem;margin:1rem auto;padding:1rem;color:#c4b7aa;text-align:center;">
       Enable JavaScript to pre-order TerraForge early access for $19.99. Early access early 2027.
     </p>
   </noscript>
